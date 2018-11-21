@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.nav{
+  position: absolute;right:50px;top:0;width: 650px;background-color: #FFF;
+}
+.left-logo img{height: 30px;margin: 20px 30px;}
+.left-logo,.left-logo a{float: left;}
+.right-view{float:right;display: flex;width: 300px;align-items: center;justify-content: space-around}
+.menu-item{padding: 0 20px;display: block;height: 73px;line-height: 73px;}
