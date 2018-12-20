@@ -1,4 +1,4 @@
-const http  = require("http");
+const http  = require("http");ssssssssssssssssssssssssssssssssssssssssssssssssssssss///
 const server  = http.createServer((req,res)=>{
 //req 请求头
 //res 响应头  
