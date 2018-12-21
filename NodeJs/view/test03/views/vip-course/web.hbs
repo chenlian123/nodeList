@@ -1,0 +1,19 @@
+{{!-- 使用自定义的helper --}}
+
+<p>生日:{{ date birthday 'Y-M-D hh:mm:ss'}}</p>
+
+  {{#extend 'jquery'}}
+  <script>
+    $(function(){
+
+    })
+  </script>
+  {{/extend}}
+
+{{#and a b }}
+    a,b 都是true;
+    {{else}}
+    a,b之中有false;
+{{/and}}
+
+{{link text="开课吧" href="http://www.kaikeba.com" style="color:red"}}

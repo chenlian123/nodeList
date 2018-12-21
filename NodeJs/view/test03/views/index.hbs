@@ -1,0 +1,33 @@
+{{#extend 'styles'}}
+<link rel="stylesheet" href="/stylesheets/index.css">
+{{/extend}}
+{{#if showVideo}}
+<video src="https://img.kaikeba.com/slogan_new.mp4" id="home-banner-video" autoplay muted></video>
+
+{{/if}}
+
+{{!-- vip课程列表 --}}
+<div class="vip-course-box">
+    <div class="vip-course-text">
+        <h1>精品课程，全新升级</h1>
+        <p>系统化名师课程，前沿性方法教学，班级化学员管理，实战性成果校验</p>
+    </div>
+    <div class="vip-course-list">
+        {{#each courses}}
+        <div class="vip-course-item" style="bacground-image:url{{poster}}">
+            <div class="right-img"></div>
+            <div class="left-text">
+                <p class="course-name">{{name}}</p>
+                <p class="course-describe">{{desc}}</p>
+                <div class="cooperate-company">
+                    <span>学员去向企业：</span>
+                    {{#each cooperation}}
+                     <img src="{{.}}" alt="">
+                    {{/each}}
+                </div>
+                <img src="https://img.kaikeba.com/arrow.png"  alt="" class="arrow">
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

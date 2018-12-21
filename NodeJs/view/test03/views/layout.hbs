@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/jquery.js"></script>
+     {{{block 'styles'}}}
+  </head>
+  <body>
+
+
+    {{!-- {{> nav}} --}}
+    {{> (whichPartial navvName)}}
+
+    {{!-- 块级partial第一种用法 --}}
+    {{!-- {{#> aabb}}
+      出现错误时你会看到这句话
+    {{/aabb}} --}}
+
+    {{!-- 使用佈局組件 第二种方式 --}}
+    {{!-- 使用块级partial传递内容 --}}
+{{#> win title='你好'}}
+  <div>这是窗口的内容</div>
+{{/win}}
+
+{{!-- 使用佈局組件 第三种方式 --}}
+{{#> layout}}
+{{#*inline 'top'}}
+  这是top
+{{/inline}}
+{{#*inline 'foo'}}
+  这是foo
+{{/inline}}
+{{#*inline 'bar'}}
+  这是bar
+{{/inline}}
+{{/layout}}
+    {{{body}}}
+
+  </body>
+
+</html>
